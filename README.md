@@ -1,6 +1,6 @@
 # F29OC-2020-21-CW2-Coursework: Specification
 
-**Note that this Coursework is currently at draft sage**
+**Note that this Coursework is currently at draft stage**
 
 ### Introduction
 
