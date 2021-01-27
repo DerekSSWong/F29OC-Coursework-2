@@ -1,5 +1,7 @@
 # F29OC-2020-21-CW2-Coursework: Specification
 
+**Note that this Coursework is currently at draft sage**
+
 ### Introduction
 
 *The full specification for CW2 is at:* `Vision > F29OC > Assessments > CW2`
