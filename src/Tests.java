@@ -43,6 +43,34 @@ class Tests {
 	 * 
 	 * 
 	 */
+	@org.junit.jupiter.api.Test
+	void specifyJobTest() {
+		JobDispatcher dispatcher = new JobDispatcher();
+		
+		for (int i = 0; i < 5; i++) {
+			Thread computeThread = new Thread() {			
+				public void run () {
+					dispatcher.queueComputeThread();
+				}
+			};	
+			computeThread.start();
+		}
+		
+		for (int i = 0; i < 5; i++) {
+			Thread storageThread = new Thread() {			
+				public void run () {
+					dispatcher.queueStorageThread();
+				}
+			};	
+			storageThread.start();
+		}
+		
+		dispatcher.specifyJob(1, 0);
+		dispatcher.specifyJob(2, 2);
+		dispatcher.specifyJob(2, 0);
+		dispatcher.specifyJob(0, 3);
+		
+	}
 	
 	
 	
