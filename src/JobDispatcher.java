@@ -20,10 +20,10 @@ public class JobDispatcher implements Dispatcher {
 	private Condition storageWait = lock.newCondition();
 	
 	private int ID = 0; //Unique key for jobs
-	private ArrayList<Job> jobList = new ArrayList<Job>();
+	public ArrayList<Job> jobList = new ArrayList<Job>();
 	
-	private int waitingCompute = 0;
-	private int waitingStorage = 0;
+	public int waitingCompute = 0;
+	public int waitingStorage = 0;
 
 
 	@Override
@@ -154,21 +154,6 @@ public class JobDispatcher implements Dispatcher {
 		return result;
 	}
 	
-	//Returns the number of currently waiting compute threads
-	public int getWaitingCompute() {
-		return waitingCompute;
-	}
-	
-	//Returns the number of currently waiting storage threads
-	public int getWaitingStorage() {
-		return waitingStorage;
-	}
-	
-	//Returns the size of the jobList
-	public int getJobListSize() {
-		return jobList.size();
-	}
-
 	//Add any private classes that you need
 	class Job {
 		

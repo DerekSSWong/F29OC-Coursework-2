@@ -73,9 +73,9 @@ class Tests {
 		//Wait for set time and assume that execution has finished:
 		try {Thread.sleep(500);} catch (InterruptedException e) {e.printStackTrace(); };
 		
-		assertEquals(0, dispatcher.getWaitingCompute());
-		assertEquals(0, dispatcher.getWaitingStorage());
-		assertEquals(0, dispatcher.getJobListSize());
+		assertEquals(0, dispatcher.waitingCompute);
+		assertEquals(0, dispatcher.waitingStorage);
+		assertEquals(0, dispatcher.jobList.size());
 		
 	}
 	
@@ -112,9 +112,9 @@ class Tests {
 		//Wait for set time and assume that execution has finished:
 		try {Thread.sleep(500);} catch (InterruptedException e) {e.printStackTrace(); };
 		
-		assertEquals(0, dispatcher.getWaitingCompute());
-		assertEquals(0, dispatcher.getWaitingStorage());
-		assertEquals(1, dispatcher.getJobListSize());
+		assertEquals(0, dispatcher.waitingCompute);
+		assertEquals(0, dispatcher.waitingStorage);
+		assertEquals(1, dispatcher.jobList.size());
 	}
 	
 	@org.junit.jupiter.api.Test
@@ -172,9 +172,9 @@ class Tests {
 		//Wait for set time and assume that execution has finished:
 		try {Thread.sleep(500);} catch (InterruptedException e) {e.printStackTrace(); };
 		
-		assertEquals(0, dispatcher.getWaitingCompute());
-		assertEquals(0, dispatcher.getWaitingStorage());
-		assertEquals(1, dispatcher.getJobListSize());
+		assertEquals(0, dispatcher.waitingCompute);
+		assertEquals(0, dispatcher.waitingStorage);
+		assertEquals(1, dispatcher.jobList.size());
 	}
 	
 }
